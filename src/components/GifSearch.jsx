@@ -6,10 +6,11 @@ const GifSearch = () => {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
 
-  const searchGIFs = async () => {
+  const searchGIFs = async (e) => {
     if (query.trim() === "") return;
     navigate(`/search/${query}`);
   };
+
   return (
     <div className="flex relative">
       <input

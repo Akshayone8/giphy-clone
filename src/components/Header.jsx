@@ -12,7 +12,7 @@ const Header = () => {
 
   const fetchGifCategories = async () => {
     const { data } = await gf.categories();
-    console.log(data);
+
     setCategories(data);
   };
 
@@ -34,7 +34,7 @@ const Header = () => {
             return (
               <Link
                 key={category.name}
-                to={`\${category.name_encoded}`}
+                to={`/${category.name_encoded}`}
                 className="px-4 py-1 hover:gradient border-b-4 lg:block  "
               >
                 {category.name}
@@ -70,7 +70,7 @@ const Header = () => {
               {categories.map((category) => (
                 <Link
                   key={category.name}
-                  to={`\${category.name_encoded}`}
+                  to={`/${category.name_encoded}`}
                   className="font-bold"
                 >
                   {category.name}
