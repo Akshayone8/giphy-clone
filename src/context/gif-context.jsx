@@ -7,7 +7,7 @@ const GifProvider = ({ children }) => {
   const [gifs, setGifs] = useState([]);
   const [filter, setFilter] = useState("gifs");
   const [favorites, setFavorites] = useState([]);
-  let gf = new GiphyFetch(import.meta.env.VITE_GIPHY_KEY);
+  let gf = new GiphyFetch(import.meta.env.VITE_GIPHY_KEY); //giphy default function which we are imported from @giphy/js-fetch-api library
 
   return (
     <GifContext.Provider
